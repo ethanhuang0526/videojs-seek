@@ -1,5 +1,5 @@
 (function() {
-  videojs.plugin('seek', function(options) {
+  videojs.registerPlugin('seek', function(options) {
     var getNamedParameterValue, seekParam, seekValue, _ref;
     if (options == null) {
       options = {};
