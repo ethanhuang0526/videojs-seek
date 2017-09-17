@@ -13,8 +13,9 @@
     seekValue = parseInt(getNamedParameterValue(seekParam));
     if (seekValue) {
       return this.ready(function() {
-        return this.one('playing', function() {
-          return this.currentTime(seekValue);
+        return this.one('canplay', function() {
+          this.currentTime(seekValue);
+          return this.play();
         });
       });
     }
